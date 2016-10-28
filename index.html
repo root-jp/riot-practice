@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css" />
+	<link rel="stylesheet" href="css/common.css" />
+	<title>Riot Parctice</title>
+</head>
+
+<body>
+	<header riot-tag="my-nav">
+<!-- 		<my-nav></my-nav> -->
+<!-- 公式には「自己終了タグはサポートしません。」とあるが、どうやらいけるようだ。バージョン上がって可能になったのか？ -->
+<!-- 		<my-nav /> -->
+	</header>
+	<main>
+		<div id="content" class="container"></div>
+	</main>
+
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/riot/2.6.4/riot+compiler.min.js"></script>
+	<script type="riot/tag" src="my-nav.tag"></script>
+	<script type="riot/tag" src="todo.tag"></script>
+	<script type="riot/tag" src="todo-input.tag"></script>
+	<script type="riot/tag" src="todo-view.tag"></script>
+	<script type="riot/tag" src="route.tag"></script>
+	<script>
+		riot.mount("my-nav");
+	</script>
+</body>
+</html>
